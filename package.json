@@ -5,7 +5,7 @@
   "dependencies": {
     "@cap-js/hana": "^2",
     "@sap/cds": "^9",
-    "@sap/xssec": "^4.12.1",
+    "@sap/xssec": "^4",
     "express": "^4"
   },
   "scripts": {
@@ -27,6 +27,9 @@
     "requires": {
       "db": {
         "kind": "hana-cloud"
+      },
+      "[production]": {
+        "auth": "xsuaa"
       }
     }
   }
