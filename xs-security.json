@@ -1,21 +1,43 @@
 {
-  "xsappname": "e_learning",
-  "tenant-mode": "dedicated",
-  "description": "Security profile of called application",
   "scopes": [
     {
-      "name": "uaa.user",
-      "description": "UAA"
+      "name": "$XSAPPNAME.ElearningAdmin",
+      "description": "ElearningAdmin"
+    },
+    {
+      "name": "$XSAPPNAME.ElearningRead",
+      "description": "ElearningRead"
+    },
+    {
+      "name": "$XSAPPNAME.ElearningSAP",
+      "description": "ElearningSAP"
     }
   ],
+  "attributes": [],
   "role-templates": [
     {
-      "name": "Token_Exchange",
-      "description": "UAA",
+      "name": "ElearningAdmin",
+      "description": "generated",
       "scope-references": [
-        "uaa.user"
-      ]
+        "$XSAPPNAME.ElearningAdmin"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "ElearningRead",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.ElearningRead"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "ElearningSAP",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.ElearningSAP"
+      ],
+      "attribute-references": []
     }
-  ],
-  "attributes": []
+  ]
 }
